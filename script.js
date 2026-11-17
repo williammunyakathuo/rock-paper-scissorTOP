@@ -1,9 +1,9 @@
 function computerNumber(){
     const randomNumber = Math.floor(Math.random()*3)
 
-    if(randomNumber===o){
+    if(randomNumber===0){
         return "rock"
-    } else if(random ===1){
+    } else if(randomNumber ===1){
         return "paper"
     }else {
         return "scissor"
@@ -40,10 +40,10 @@ function playGame(){
     }
     console.log("Your score is " + humanScore)
     console.log("Thee comps score is " + computerScore)
-}
+
 
 for (let i=0; i<5; i++){
-    const humanSelection = humanChoice();
+    const humanSelection = humanNumber();
     const compSelection = computerNumber()
 
     playRound(humanSelection, compSelection)
@@ -57,8 +57,10 @@ if (humanScore>computerScore){
     console.log("And the winner is YOU")
 }else if (humanScore<computerScore){
     console.log("And the winner is Thee Computer")
-}else(
-    console.log("And we got a DRAw")
-)
+}else{
+console.log("And we got a Draw")
+}
+    
+}
 
 playGame()
